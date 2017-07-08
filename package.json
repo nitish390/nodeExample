@@ -1,0 +1,22 @@
+{
+  "name": "nodeexample",
+  "version": "1.0.0",
+  "description": "sample node files",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitish390/nodeExample.git"
+  },
+  "author": "nitish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitish390/nodeExample/issues"
+  },
+  "homepage": "https://github.com/nitish390/nodeExample#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}

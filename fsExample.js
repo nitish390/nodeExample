@@ -1,10 +1,14 @@
-Create a new file using the appendFile() method:
+// Create a new file using the appendFile() method:
 
 var fs = require('fs');
 
+var num = Math.floor(100*Math.random());
 
+for(i =0;i<99999;i++){
+  num = num + ' ' + Math.floor(100*Math.random())
+}
 
-fs.appendFile('mynewfile1.txt', 'Hello content!', function (err) {
+fs.appendFile('mynewfile1.txt', num, function (err) {
 
   if (err) throw err;
 
@@ -14,104 +18,104 @@ fs.appendFile('mynewfile1.txt', 'Hello content!', function (err) {
 
 
 
-Create a new, empty file using the open() method:
+// Create a new, empty file using the open() method:
 
-var fs = require('fs');
+// var fs = require('fs');
 
 
 
-fs.open('mynewfile2.txt', 'w', function (err, file) {
+// fs.open('mynewfile7.txt', 'w', function (err, file) {
 
-  if (err) throw err;
+//   if (err) throw err;
 
-  console.log('Saved!');
+//   console.log('Saved!');
 
-});
+// });
 
 
 
-Create a new file using the writeFile() method:
+// Create a new file using the writeFile() method:
 
-var fs = require('fs');
+// var fs = require('fs');
 
 
 
-fs.writeFile('mynewfile3.txt', 'Hello content!', function (err) {
+// fs.writeFile('mynewfile3.txt', 'Hello content!', function (err) {
 
-  if (err) throw err;
+//   if (err) throw err;
 
-  console.log('Saved!');
+//   console.log('Saved!');
 
-});
+// });
 
 
 
-Append "This is my text." to the end of the file "mynewfile1.txt”:.
+// Append "This is my text." to the end of the file "mynewfile1.txt”:.
 
 
 
-var fs = require('fs');
+// var fs = require('fs');
 
 
 
-fs.appendFile('mynewfile1.txt', ' This is my text.', function (err) {
+// fs.appendFile('mynewfile1.txt', ' This is my text.', function (err) {
 
-  if (err) throw err;
+//   if (err) throw err;
 
-  console.log('Updated!');
+//   console.log('Updated!');
 
-});
+// });
 
 
 
-Replace the content of the file "mynewfile3.txt":
+// Replace the content of the file "mynewfile3.txt":
 
 
 
-var fs = require('fs');
+// var fs = require('fs');
 
 
 
-fs.writeFile('mynewfile3.txt', 'This is my text', function (err) {
+// fs.writeFile('mynewfile3.txt', 'This is my text', function (err) {
 
-  if (err) throw err;
+//   if (err) throw err;
 
-  console.log('Replaced!');
+//   console.log('Replaced!');
 
-});
+// });
 
 
 
-Delete "mynewfile2.txt":
+// Delete "mynewfile2.txt":
 
-var fs = require('fs');
+// var fs = require('fs');
 
 
 
-fs.unlink('mynewfile2.txt', function (err) {
+// fs.unlink('mynewfile2.txt', function (err) {
 
-  if (err) throw err;
+//   if (err) throw err;
 
-  console.log('File deleted!');
+//   console.log('File deleted!');
 
-});
+// });
 
 
 
 
 
-Rename "mynewfile1.txt" to "myrenamedfile.txt":
+// Rename "mynewfile1.txt" to "myrenamedfile.txt":
 
 
 
-var fs = require('fs');
+// var fs = require('fs');
 
 
 
-fs.rename('mynewfile1.txt', 'myrenamedfile.txt', function (err) {
+// fs.rename('mynewfile1.txt', 'myrenamedfile.txt', function (err) {
 
-  if (err) throw err;
+//   if (err) throw err;
 
-  console.log('File Renamed!');
+//   console.log('File Renamed!');
 
-});
+// });

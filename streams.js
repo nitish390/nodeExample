@@ -1,11 +1,11 @@
-Reading from a Stream
+// Reading from a Stream
 var fs = require("fs");
 
 var data = '';
 
 // Create a readable stream
 
-var readerStream = fs.createReadStream('input.txt');
+var readerStream = fs.createReadStream('mynewfile1.txt');
 
 // Set the encoding to be utf8. 
 
@@ -16,6 +16,7 @@ readerStream.setEncoding('UTF8');
 readerStream.on('data', function(chunk) {
 
    data += chunk;
+   console.log(data,'---------------------------------------------','\n','\n','\n','\n','\n','\n','\n','\n','\n','\n','\n');
 
 });
 
@@ -39,102 +40,102 @@ console.log("Program Ended");
 
 
 
-Writing to a Stream
-var fs = require("fs");
+// Writing to a Stream
+// var fs = require("fs");
 
-var data = 'Simply Easy Learning';
+// var data = 'Simply Easy Learning';
 
-// Create a writable stream
+// // Create a writable stream
 
-var writerStream = fs.createWriteStream('output.txt');
+// var writerStream = fs.createWriteStream('output.txt');
 
-// Write the data to stream with encoding to be utf8
+// // Write the data to stream with encoding to be utf8
 
-writerStream.write(data,'UTF8');
+// writerStream.write(data,'UTF8');
 
-// Mark the end of file
+// // Mark the end of file
 
-writerStream.end();
+// writerStream.end();
 
-// Handle stream events --> finish, and error
+// // Handle stream events --> finish, and error
 
-writerStream.on('finish', function() {
+// writerStream.on('finish', function() {
 
-    console.log("Write completed.");
+//     console.log("Write completed.");
 
-});
+// });
 
-writerStream.on('error', function(err){
+// writerStream.on('error', function(err){
 
-   console.log(err.stack);
+//    console.log(err.stack);
 
-});
+// });
 
-console.log("Program Ended");
-
-
-
-Piping the Streams
-
-
-var fs = require("fs");
-
-// Create a readable stream
-
-var readerStream = fs.createReadStream('input.txt');
-
-// Create a writable stream
-
-var writerStream = fs.createWriteStream('output.txt');
-
-// Pipe the read and write operations
-
-// read input.txt and write data to output.txt
-
-readerStream.pipe(writerStream);
-
-console.log("Program Ended");
+// console.log("Program Ended");
 
 
 
+// Piping the Streams
 
 
-Chaining the Streams
+// var fs = require("fs");
 
-var fs = require("fs");
+// // Create a readable stream
 
-var zlib = require('zlib');
+// var readerStream = fs.createReadStream('input.txt');
 
-// Compress the file input.txt to input.txt.gz
+// // Create a writable stream
 
-fs.createReadStream('input.txt')
+// var writerStream = fs.createWriteStream('output.txt');
 
-   .pipe(zlib.createGzip())
+// // Pipe the read and write operations
 
-   .pipe(fs.createWriteStream('input.txt.gz'));  
+// // read input.txt and write data to output.txt
 
-console.log("File Compressed.");
+// readerStream.pipe(writerStream);
+
+// console.log("Program Ended");
 
 
 
 
 
+// Chaining the Streams
+
+// var fs = require("fs");
+
+// var zlib = require('zlib');
+
+// // Compress the file input.txt to input.txt.gz
+
+// fs.createReadStream('input.txt')
+
+//    .pipe(zlib.createGzip())
+
+//    .pipe(fs.createWriteStream('input.txt.gz'));  
+
+// console.log("File Compressed.");
 
 
-To decompress
 
 
 
-var fs = require("fs");
 
-var zlib = require('zlib');
 
-// Decompress the file input.txt.gz to input.txt
+// To decompress
 
-fs.createReadStream('input.txt.gz')
 
-   .pipe(zlib.createGunzip())
 
-   .pipe(fs.createWriteStream('input.txt'));  
+// var fs = require("fs");
 
-console.log("File Decompressed.");
+// var zlib = require('zlib');
+
+// // Decompress the file input.txt.gz to input.txt
+
+// fs.createReadStream('input.txt.gz')
+
+//    .pipe(zlib.createGunzip())
+
+//    .pipe(fs.createWriteStream('input.txt'));  
+
+// console.log("File Decompressed.");

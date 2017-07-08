@@ -1,17 +1,17 @@
 //Create HTTP Server
-var http = require('http');
+// var http = require('http');
 
 
 
-//create a server object:
+// //create a server object:
 
-http.createServer(function (req, res) {
+// http.createServer(function (req, res) {
 
-  res.write('Hello World!'); //write a response to the client
+//   res.write('Hello Nitish!'); //write a response to the client
 
-  res.end(); //end the response
+//   res.end(); //end the response
 
-}).listen(8080); //the server object listens on port 8080
+// }).listen(8080); //the server object listens on port 8080
 
 
 
@@ -25,25 +25,25 @@ http.createServer(function (req, res) {
 
 
 
-var http = require('http');
+// var http = require('http');
 
-http.createServer(function (req, res) {
+// http.createServer(function (req, res) {
 
-  res.writeHead(200, {'Content-Type': 'text/html'});
+//   res.writeHead(500, {'Content-Type': 'text/html'});
 
-  res.write('Hello World!');
+//   res.write('Hello World!');
 
-  res.end();
+//   res.end();
 
-}).listen(8080);
-
-
+// }).listen(8080);
 
 
 
 
 
-//Read the Query String
+
+
+// //Read the Query String
 
 
 
