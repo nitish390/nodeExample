@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/nitish390/nodeExample#readme",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "random-words": "0.0.1"
   }
 }
